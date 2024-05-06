@@ -1,7 +1,7 @@
-"""lista = []
-lista.append()"""
+nomes = ["","","","",""]
 
-lista = []
-lista = ["maça", "banana", "morango"]
+for x in range(5):
+    nomes[x] = input(f"Digite um nome:")
 
-print(lista[0])
+for y in range(5):
+    print(f"{nomes[y]}", end=" ")
