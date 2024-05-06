@@ -1,9 +1,17 @@
+#Dados os valores de horários abaixo, decifre a lógica e faça um código para executar
+# entrada01  3:45
+# entrada02  14:20
+# entrada01 :05
+
 # Pedir ao usuário as horas e os minutos
 
 hora1 = int(input("Primeira Hora: "))
 minuto1 = int(input("Primeira minuto: "))
 hora2 = int(input("Segunda Hora: "))
 minuto2 = int(input("Segunda minuto: "))
+
+#Criando uma variável para hora
+hora = 0
 
 #Transforma as horas de entrada em 12 horas.
 
