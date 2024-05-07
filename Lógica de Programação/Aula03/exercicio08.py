@@ -1,3 +1,4 @@
+# Mesmo exercicio anterio, a difererça é o comando switch case
 mes = int(input("Digite um numero entre 1 a 12"))
 
 match mes:

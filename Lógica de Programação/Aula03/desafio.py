@@ -1,7 +1,7 @@
 #Dados os valores de horários abaixo, decifre a lógica e faça um código para executar
 # entrada01  3:45
 # entrada02  14:20
-# entrada01 :05
+# saida 06:05
 
 # Pedir ao usuário as horas e os minutos
 

@@ -1,3 +1,6 @@
+#Refaça o exercício anterior. agora implementando a pergunta:
+# "Deseja realizar novo cálculo?"
+
 x = 0
 
 while x < 10000000:

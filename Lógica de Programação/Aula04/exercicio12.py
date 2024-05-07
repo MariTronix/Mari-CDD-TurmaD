@@ -1,3 +1,8 @@
+#Escreva um código para ler as notas de 1a. e 2a. avaliações
+# de um aluno, calcule e imprima a média desse aluno. Só devem
+# ser aceitos valores válidos, durante a leitura, (0 a 10)
+# para cada nota.
+
 nota1 = int(input("Nota da primeira avaliação: "))
 nota2 = int(input("Nota da segunda avaliação: "))
 

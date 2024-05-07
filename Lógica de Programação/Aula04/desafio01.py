@@ -1,9 +1,6 @@
-num = int(input("Digite um número: "))
-x = 1
-while x <= num:
-    count = 1
-    while count <= x:
+num = int(input("Digite um numero: "))
+
+for x in range(1,num+1):
+    for z in range(x):
         print(x, end=" ")
-        count += 1
     print()
-    x += 1

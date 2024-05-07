@@ -1,3 +1,7 @@
+# Ler 10 valores, calcular e escrever a média aritmetica
+# desses valores lidos.
+
+
 soma = 0
 
 for x in range(1,11):

@@ -1,3 +1,6 @@
+#Receber 10 números do usuário e mostre a soma de todos os
+# números ímapres
+
 soma = 0
 
 for x in range (1,11):

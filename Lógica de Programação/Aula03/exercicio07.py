@@ -1,5 +1,11 @@
+#Receba, do usuário, um número de 1 a 12 e mostre o nome do mês
+# correspondente. Caso o mês nao existir, mostrar essa informação
+#Obs: usando IF
+
+#Variável de mês
 mes = int(input("Digite um numero entre 1 a 12"))
 
+#
 if mes == 1:
     print("Janeiro")
 elif mes == 2:

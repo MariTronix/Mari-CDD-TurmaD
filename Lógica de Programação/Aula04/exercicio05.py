@@ -1,3 +1,7 @@
+#Ler 10 valores e escrever quantos desses valores lidos estão no
+# intervalo [10,20] (incluindo od valores 10 e 20 no intervalo)
+# e quantos deles estãfora deste intervalo
+
 noIntervalo = 0
 foraDoIntervalo = 0
 

@@ -1,3 +1,7 @@
+#Faça um código para ler a senha de um usuário
+# e apos 3 tentativas erradas, sair do programa,
+# informando que a senha etá bloqueada
+
 """pin = 1234
 x = 0
 

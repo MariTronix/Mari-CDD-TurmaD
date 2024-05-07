@@ -1,3 +1,6 @@
+# Ler 10 valores, calcular e escrever a média aritmetica
+# desses valores lidos.(usando while)
+
 soma = 0
 x = 0
 
