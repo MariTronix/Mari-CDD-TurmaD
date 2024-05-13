@@ -23,7 +23,7 @@ def login(user, senha):
     contSenha = 1 
 
     for z in range(5):
-        if login == nomes[z]:
+        if user == nomes[z]:
             while senha != senhas[z]:
                 contSenha += 1
                 senha = input("Senha invalida! Digite sua senha novamente: ")
@@ -31,7 +31,7 @@ def login(user, senha):
                     print("Bloqueado")
                     break
             if senha == senhas[z]:
-                return(f"Login efetuado com sucesso, Seja Bem vindo(a): {login.capitalize()}")
+                return(f"Login efetuado com sucesso, Seja Bem vindo(a):{login.capitalize()}")
 
         else:
             cont += 1
