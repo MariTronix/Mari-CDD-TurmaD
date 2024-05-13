@@ -1,16 +1,13 @@
-nomes = ["","","","",""]
+alunos = int(input("Quantos alunos tem na turma:"))
 
-for x in range(5):
-    nomes[x] = input(f"Digite um nome:")
+nomes = []
 
-for y in range(5):
-    print(f"{nomes[y]} = array[{y}]", end=" ")
+for x in range(alunos):
+    nomes.insert(x,input("Digite um nome: "))
 
-# OU
-nomes = ["","","","",""]
+nome = input("Nome do Aluno: ").lower()
 
-for x in range(5):
-    nomes[x] = input(f"Digite um nome:")
-
-for y in range(5):
-    print(nomes[y], y)
+if nome in nomes:
+    print(f"O aluno {nome} está na lista!")
+else:
+    print(f"O aluno {nome} não está na lista.")
