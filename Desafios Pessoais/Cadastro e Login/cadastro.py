@@ -1,6 +1,5 @@
 from cadastroLogin import cadastro,login
 
-
 #Cadastro
 
 cadastro()

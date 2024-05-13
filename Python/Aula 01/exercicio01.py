@@ -36,7 +36,43 @@ def estoque(produto,quantidade, preco):
     for y in range(5):
         valorunitario.insert(y,quantidade)
 
+def somar(*x):
+    soma = 0
+    for y in x:
+        soma += y
+    print(soma)
 
+def texto(argumento):
+    letra = len(argumento)
+    for x in argumento:
+        if x in ".,!? ":
+            letra = letra - 1
+        print(x, end="")
+    print(letra)
+    for y in range(letra-1,-1,-1):
+        print(argumento[y], end="")
 
+    print(argumento[::-1])
 
-produto = input("Digite nome do produto: ")
+def numero_unicos(*num):
+
+    nova_lista =set(num)
+
+    """for x in num:
+        if x not in nova_lista:
+            nova_lista.append(x)"""
+
+    print(nova_lista)
+
+def numero_primo(num):
+    if num == 1:
+        return (f"{num} não é primo")
+
+    elif num == 2:
+        return (f"{num} é primo")
+
+    else:
+        for x in range(2,num):
+            if (num % x == 0):
+                return num, "não é primo"
+        return num, "É primo"

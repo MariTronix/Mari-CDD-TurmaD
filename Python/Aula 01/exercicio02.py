@@ -1,4 +1,4 @@
-from exercicio01 import valorTotal
+from exercicio01 import *
 
-valorTotal("Arroz", 10, 10)
+print(numero_primo(9))
 
