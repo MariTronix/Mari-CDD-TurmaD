@@ -10,32 +10,68 @@ class Pessoa():
     def comer(self, alimento):
 
         if self.comendo == False and self.falando == False and self.dormindo == False:
-            print(f"{self.nome} está comendo {alimento}")
+            print(f"{self.nome} começou a comendo {alimento}")
             self.comendo = True
         elif self.comendo == True and self.falando == False and self.dormindo == False:
-            print(f"{self.nome} já está comendo")
+            print(f"{self.nome} já está comendo, não pode comer {alimento} agora.")
         elif self.comendo == False and self.falando == True and self.dormindo == False:
-            print(f"{self.nome} já está falando")
+            print(f"{self.nome} está falando, não pode comer {alimento} agora.")
         elif self.comendo == False and self.falando == False and self.dormindo == True:
-            print(f"{self.nome} está dormindo")
+            print(f"{self.nome} está dormindo, não pode comer {alimento} agora.")
 
     def pararDeComer(self):
 
-        print(f"{self.nome} parou de comer")
-        self.comendo = False
+        if self.comendo == True and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} parou de comer")
+            self.comendo = False
+        elif self.comendo == False and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} está fazendo nada")
+        elif self.comendo == False and self.falando == True and self.dormindo == False:
+            print(f"{self.nome} não está comendo, está falando")
+        elif self.comendo == False and self.falando == False and self.dormindo == True:
+            print(f"{self.nome} não está comendo, está dormindo")
 
     def falar(self):
-        print(f"{self.nome} está falando")
-        self.falando = True
 
-    def ParaDeFalar(self):
-        print(f"{self.nome} parou de falar")
-        self.falando = False
+        if self.comendo == False and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} começou a falando")
+            self.falando = True
+        elif self.comendo == True and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} está comendo, não pode falar")
+        elif self.comendo == False and self.falando == True and self.dormindo == False:
+            print(f"{self.nome} já está falando")
+        elif self.comendo == False and self.falando == False and self.dormindo == True:
+            print(f"{self.nome} não pode falar, está dormindo")
+
+    def pararDeFalar(self):
+        if self.comendo == False and self.falando == True and self.dormindo == False:
+            print(f"{self.nome} parou de falar")
+            self.falando = False
+        elif self.comendo == True and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} já está comendo")
+        elif self.comendo == False and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} está fazendo nada")
+        elif self.comendo == False and self.falando == False and self.dormindo == True:
+            print(f"{self.nome} está dormindo")
 
     def dormir(self):
-        print(f"{self.nome} foi dormir")
-        self.dormindo = True
+        if self.comendo == False and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} foi dormir")
+            self.dormindo = True
+        elif self.comendo == True and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} já está comendo, não pode ir dormir")
+        elif self.comendo == False and self.falando == True and self.dormindo == False:
+            print(f"{self.nome} já está falando, depois que parar de falar. Pode ir dormir")
+        elif self.comendo == False and self.falando == False and self.dormindo == True:
+            print(f"{self.nome} já está dormindo")
 
-    def acordo(self):
-        print(f"{self.nome} acordou")
-        self.dormindo = False
+    def acorda(self):
+        if self.comendo == False and self.falando == False and self.dormindo == True:
+            print(f"{self.nome} Acordou")
+            self.dormindo = False
+        elif self.comendo == True and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} já está acordado e comendo")
+        elif self.comendo == False and self.falando == True and self.dormindo == False:
+            print(f"{self.nome} já está acordado e falando")
+        elif self.comendo == False and self.falando == False and self.dormindo == False:
+            print(f"{self.nome} está fazendo nada")
