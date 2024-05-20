@@ -28,7 +28,7 @@ class Pessoa():
             return (f"{self.nome} está fazendo nada")
         elif self.falando == True:
             return (f"{self.nome} não está comendo, está falando")
-        elif self.comendo == False and self.falando == False and self.dormindo == True:
+        elif self.dormindo == True:
             return (f"{self.nome} não está comendo, está dormindo")
 
     def falar(self):
@@ -114,3 +114,56 @@ class Pessoa():
                 print(self.acordar())
             elif cont == 7:
                 print("Saindo")
+
+class Conta():
+    def __init__(self, numero, nome, tipo):
+        self.nome = nome
+        self.numero = numero
+        self.tipo = tipo
+        self.status = False
+        self.saldo = 0.0
+
+    def ativar(self):
+        decisao = int(input("Gostaria de ativar sua conta 1 - sim "
+                            "\n2 - não"))
+        if decisao == 1:
+            if self.status == False:
+                self.status = True
+                print("Conta ativada")
+            else:
+                print("Conta já está ativada")
+
+    def desativar(self):
+        decisao = int(input("Gostaria de desativar sua conta 1 - sim "
+                            "\n2 - não"))
+        if decisao == 1:
+            if self.status == True:
+                self.status = False
+                print("Conta desativada")
+            else:
+                print("Conta já está desativada")
+
+    def deposito(self, valor):
+        if valor < 0:
+            print("Error")
+        elif self.status == True:
+            self.saldo += valor
+            print(f"Deposito com sucesso")
+        else:
+            print("Conta não está ativa")
+
+    def verificarSaldo(self):
+        if self.status == True:
+            print(self.saldo)
+        else:
+            print("Conta não está ativa")
+
+    def saca(self, valor):
+        if valor < 0:
+            print("Error")
+        if self.status == True:
+            if self.saldo >= valor and self.saldo != 0:
+                self.saldo -= valor
+                print("Saque com sucesso")
+            elif self.saldo < valor:
+                print(f"Saque negado, Saldo: {self.saldo} ")

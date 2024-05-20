@@ -1,5 +1,4 @@
 from classe import *
 
-p1 = Pessoa("Mari", 100, 27)
+p1 = Conta("0001","Mari", "Corrente")
 
-p1.menu()
