@@ -4,36 +4,44 @@ senhas = ["a","b","c","d","e"]
 
 #Cadastro
 
-def cadastro():
+class CadastroLogin():
 
-    for x in range(5):
-        nome = input("Digite nome do usuário: ").capitalize()
-        while nome in nomes:
-            nome = input("Esse usuário ja exixste. Digite outro nome do usuário: ").capitalize()
-        nomes.insert(x, nome)
+    nomes = []
+    senhas = []
+    def __init__(self, user, senha):
+        self.user = user
+        self.senha = senha
 
-        senha = input("Digite a senha: ")
-        senhas.insert(x, senha)
+    def cadastro(self):
 
-#Login
+        for x in range(5):
+            self.user = input("Digite nome do usuário: ").capitalize()
+            while self in nomes:
+                nome = input("Esse usuário ja exixste. Digite outro nome do usuário: ").capitalize()
+            nomes.insert(x, nome)
 
-def login(user, senha):
-    
-    cont = 0
-    contSenha = 1 
+            senha = input("Digite a senha: ")
+            senhas.insert(x, senha)
 
-    for z in range(5):
-        if user == nomes[z]:
-            while senha != senhas[z]:
-                contSenha += 1
-                senha = input("Senha invalida! Digite sua senha novamente: ")
-                if contSenha == 3:
-                    print("Bloqueado")
-                    break
-            if senha == senhas[z]:
-                return(f"Login efetuado com sucesso, Seja Bem vindo(a):{login.capitalize()}")
+    #Login
 
-        else:
-            cont += 1
-            if cont == 5:
-                return("Usuário não existe")
+    def login(self, user, senha):
+
+        cont = 0
+        contSenha = 1
+
+        for z in range(5):
+            if user == nomes[z]:
+                while senha != senhas[z]:
+                    contSenha += 1
+                    senha = input("Senha invalida! Digite sua senha novamente: ")
+                    if contSenha == 3:
+                        print("Bloqueado")
+                        break
+                if senha == senhas[z]:
+                    return(f"Login efetuado com sucesso, Seja Bem vindo(a):{login.capitalize()}")
+
+            else:
+                cont += 1
+                if cont == 5:
+                    return("Usuário não existe")

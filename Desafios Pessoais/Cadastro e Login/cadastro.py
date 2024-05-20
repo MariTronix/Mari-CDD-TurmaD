@@ -1,11 +1,13 @@
-from cadastroLogin import cadastro,login
+from cadastroLogin import *
 
 #Cadastro
 
+cadastro = CadastroLogin()
+
 cadastro()
 
-#Login
+"""#Login
 user = input("Digite o nome do seu usuário: ").capitalize()
 senha = input("Digite sua senha: ")
 
-print(login(user, senha))
+print(login(user, senha))"""

@@ -12,11 +12,11 @@ class Pessoa():
         if self.comendo == False and self.falando == False and self.dormindo == False:
             self.comendo = True
             return (f"{self.nome} começou a comer {alimento}")
-        elif self.comendo == True and self.falando == False and self.dormindo == False:
+        elif self.comendo == True:
             return (f"{self.nome} está comendo, não pode comer {alimento} agora.")
-        elif self.comendo == False and self.falando == True and self.dormindo == False:
+        elif self.falando == True:
             return (f"{self.nome} está falando, não pode comer {alimento} agora.")
-        elif self.comendo == False and self.falando == False and self.dormindo == True:
+        elif self.dormindo == True:
             return (f"{self.nome} está dormindo, não pode comer {alimento} agora.")
 
     def pararDeComer(self):
@@ -26,7 +26,7 @@ class Pessoa():
             return (f"{self.nome} parou de comer")
         elif self.comendo == False and self.falando == False and self.dormindo == False:
             return (f"{self.nome} está fazendo nada")
-        elif self.comendo == False and self.falando == True and self.dormindo == False:
+        elif self.falando == True:
             return (f"{self.nome} não está comendo, está falando")
         elif self.comendo == False and self.falando == False and self.dormindo == True:
             return (f"{self.nome} não está comendo, está dormindo")
@@ -36,42 +36,42 @@ class Pessoa():
         if self.comendo == False and self.falando == False and self.dormindo == False:
             self.falando = True
             return (f"{self.nome} começou a falar")
-        elif self.comendo == True and self.falando == False and self.dormindo == False:
-            return (f"{self.nome} está comendo, não pode falar")
-        elif self.comendo == False and self.falando == True and self.dormindo == False:
+        elif self.falando == True:
             return (f"{self.nome} está falando")
-        elif self.comendo == False and self.falando == False and self.dormindo == True:
+        elif self.comendo == True:
+            return (f"{self.nome} está comendo, não pode falar")
+        elif self.dormindo == True:
             return (f"{self.nome} não pode falar, está dormindo")
 
     def pararDeFalar(self):
         if self.comendo == False and self.falando == True and self.dormindo == False:
             self.falando = False
             return (f"{self.nome} parou de falar")
-        elif self.comendo == True and self.falando == False and self.dormindo == False:
+        elif self.comendo == True:
             return (f"{self.nome} está comendo")
+        elif self.dormindo == True:
+            return (f"{self.nome} está dormindo")
         elif self.comendo == False and self.falando == False and self.dormindo == False:
             return (f"{self.nome} está fazendo nada")
-        elif self.comendo == False and self.falando == False and self.dormindo == True:
-            return (f"{self.nome} está dormindo")
 
     def dormir(self):
         if self.comendo == False and self.falando == False and self.dormindo == False:
             self.dormindo = True
             return (f"{self.nome} foi dormir")
-        elif self.comendo == True and self.falando == False and self.dormindo == False:
+        elif self.comendo == True:
             return (f"{self.nome} está comendo, não pode ir dormir")
-        elif self.comendo == False and self.falando == True and self.dormindo == False:
+        elif self.falando == True:
             return (f"{self.nome} está falando, não pode ir dormir")
-        elif self.comendo == False and self.falando == False and self.dormindo == True:
-            return (f"{self.nome} está dormindo")
+        elif self.dormindo == True:
+            return (f"{self.nome} já está dormindo")
 
     def acordar(self):
         if self.comendo == False and self.falando == False and self.dormindo == True:
             self.dormindo = False
             return (f"{self.nome} Acordou")
-        elif self.comendo == True and self.falando == False and self.dormindo == False:
+        elif self.comendo == True:
             return (f"{self.nome} está acordado e comendo")
-        elif self.comendo == False and self.falando == True and self.dormindo == False:
+        elif self.falando == True:
             return (f"{self.nome} está acordado e falando")
         elif self.comendo == False and self.falando == False and self.dormindo == False:
             return (f"{self.nome} está fazendo nada")
@@ -113,4 +113,4 @@ class Pessoa():
             elif cont == 6:
                 print(self.acordar())
             elif cont == 7:
-                print("Saindo...")
+                print("Saindo")
