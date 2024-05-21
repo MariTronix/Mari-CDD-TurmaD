@@ -10,6 +10,7 @@ class PedraPaPelTesoura:
         self.jogada1 = primeiraJogada.lower()
         self.jogada2 = segundaJogada.lower()
 
+
         if self.jogada1 == "pedra" and self.jogada2 == "pedra":
             print("Empate")
 
@@ -37,4 +38,4 @@ class PedraPaPelTesoura:
         elif self.jogada1 == "tesoura" and  self.jogada2 == "tesoura":
             print("Empate")
         else:
-            print("Tente novamente")
+            print("Tente novamente...")
