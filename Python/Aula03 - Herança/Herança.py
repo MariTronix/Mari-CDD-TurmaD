@@ -53,7 +53,6 @@ class Retangulo(Forma):
 
 class Triangulo(Forma):
     def __init__(self):
-
         super().__init__()
 
     def calculaArea(self, base, altura):

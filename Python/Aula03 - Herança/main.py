@@ -8,6 +8,3 @@ p1.calculaPerimetro(10,10)
 
 p2.calculaArea(10, 10)
 p2.calculaPerimetro(10)
-
-
-
