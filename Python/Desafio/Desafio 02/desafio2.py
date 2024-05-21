@@ -10,8 +10,10 @@ class PedraPaPelTesoura:
         self.jogada1 = primeiraJogada.lower()
         self.jogada2 = segundaJogada.lower()
 
+        if self.jogada1 not in ["pedra", "papel", "tesoura"] or self.jogada2 not in ["pedra", "papel", "tesoura"]:
+            print("Jogada inválida. Tente novamente...")
 
-        if self.jogada1 == "pedra" and self.jogada2 == "pedra":
+        elif self.jogada1 ==  self.jogada2:
             print("Empate")
 
         elif self.jogada1 == "pedra" and self.jogada2 == "papel":
@@ -23,9 +25,6 @@ class PedraPaPelTesoura:
         elif self.jogada1 == "papel" and self.jogada2 == "pedra":
             print(f"Papel venceu \n{self.jogador1} Venceu")
 
-        elif self.jogada1 == "papel" and self.jogada2 == "papel":
-            print("Empate")
-
         elif self.jogada1 == "papel" and self.jogada2 == "tesoura":
             print(f"Tesoura venceu \n{self.jogador2} Venceu")
 
@@ -34,8 +33,3 @@ class PedraPaPelTesoura:
 
         elif self.jogada1 == "tesoura" and  self.jogada2 == "papel":
             print(f"Tesoura venceu \n{self.jogador1} Venceu")
-
-        elif self.jogada1 == "tesoura" and  self.jogada2 == "tesoura":
-            print("Empate")
-        else:
-            print("Tente novamente...")
