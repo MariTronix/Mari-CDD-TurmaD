@@ -64,3 +64,87 @@ class Triangulo(Forma):
         print(self.perimetro)
 
 
+class Ingresso():
+    def __init__(self, valor):
+        self.valor = valor
+
+    def imprime(self):
+        print(f"Valor do ingresso: {self.valor}")
+
+class Vip(Ingresso):
+    def __init__(self, valor):
+        super().__init__(valor)
+    def imprime(self):
+        vip = self.valor * (100/50)
+        print(f"Valor do vip é {vip}")
+
+
+class Atleta():
+    def __init__(self,peso, aposentado = False):
+        self.peso = peso
+        self.aposentado = aposentado
+        self.aquecimento = False
+
+    def aposentar(self):
+        if self.aposentado == False:
+            self.aposentado = True
+            print("Atleta aposentado")
+
+    def aquecer(self):
+        if self.aquecimento == False and self.aposentado == False:
+            self.aquecimento = True
+            print("Atleta aquecido")
+        elif self.aquecimento == False and self.aposentado == True:
+            print("Atleta Aposentado")
+        elif self.aquecimento == True:
+            print("Atleta já está aquecido ")
+
+class Corredor(Atleta):
+    def __init__(self, peso, aposentado):
+        super().__init__(peso, aposentado)
+
+    def correr(self):
+        if self.aquecimento == True and self.aposentado == False:
+            print("Corredor começou a correr")
+        elif self.aquecimento == False:
+            print("Corredor não aqueceu")
+        elif self.aposentado == True:
+            print("Corredor aposentado")
+        else:
+            print("ERRO")
+
+
+class Nadador(Atleta):
+    def __init__(self, peso, aposentado):
+        super().__init__(peso, aposentado)
+
+    def nadar(self):
+        if self.aquecimento == True and self.aposentado == False:
+            print("Nadador começou a correr")
+        elif self.aquecimento == False:
+            print("Nadador não aqueceu")
+        elif self.aposentado == True:
+            print("Nadador aposentado")
+        else:
+            print("ERRO")
+
+class Ciclista(Atleta):
+    def __init__(self, peso, aposentado):
+        super().__init__(peso, aposentado)
+
+    def pedalar(self):
+        if self.aquecimento == True and self.aposentado == False:
+            print("Ciclista começou a correr")
+        elif self.aquecimento == False:
+            print("Ciclista não aqueceu")
+        elif self.aposentado == True:
+            print("Ciclista aposentado")
+        else:
+            print("ERRO")
+
+class TriAtleta(Corredor,Nadador,Ciclista):
+    def __init__(self, peso):
+        super().__init__(peso)
+
+class CEP():
+    def __init__(self):
