@@ -1,10 +1,8 @@
 from Herança import *
 
-p1 = Retangulo()
-p2 = Triangulo()
 
-p1.calculaArea(10,10)
-p1.calculaPerimetro(10,10)
+"""p2 = Ingresso(100)
+p2.imprime()
+p3 = Vip(p2.valor)
+p3.imprime()"""
 
-p2.calculaArea(10, 10)
-p2.calculaPerimetro(10)

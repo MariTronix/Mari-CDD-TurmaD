@@ -1,5 +1,5 @@
 from desafio2 import *
 
-p1 = PedraPaPelTesoura("Lipinho", "Vitorinha")
+p1 = PedraPaPelTesoura("Mari", "Lipe")
 
-p1.resultado("tesoura", "tesoura")
+p1.resultado()
