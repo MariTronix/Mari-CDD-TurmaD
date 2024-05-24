@@ -1,4 +1,4 @@
-class PedraPaPelTesoura:
+class PedraPapelTesoura:
     def __init__(self, jogador1, jogador2):
         self.jogador1 = jogador1
         self.jogador2 = jogador2
@@ -32,7 +32,7 @@ class PedraPaPelTesoura:
                 if jogadaDoJogador1 ==  jogadaDoJogador2:
                     print(f"Empate")
                     print(f"{self.jogador1} - {vitoria1} X {vitoria2} - {self.jogador2}")
-
+                    
                 elif jogadaDoJogador1 == "pedra" and jogadaDoJogador2 == "papel":
                     vitoria2 += 1
                     print(f"Papel venceu \n{self.jogador2} Venceu")
