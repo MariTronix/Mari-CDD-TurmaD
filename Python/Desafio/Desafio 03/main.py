@@ -2,4 +2,4 @@ from Desafio03 import *
 
 p1 = JogoDaVelha("Mari","Lipe")
 
-p1.forma()
+p1.resultado()
