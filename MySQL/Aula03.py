@@ -1,4 +1,4 @@
-Enter password: ******
+""""Enter password: ******
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 108
 Server version: 8.0.37 MySQL Community Server - GPL
@@ -457,4 +457,4 @@ mysql> select alunos.matricula, alunos.nome,
 +-----------+------------+---------+------------+
 12 rows in set (0.02 sec)
 
-mysql>
+mysql>""""
