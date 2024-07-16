@@ -10,8 +10,8 @@ public class Calculadora {
 		System.out.println(num.sub3num(1, 20, 30));
 		System.out.println(num.mult2num(10, 10));
 		System.out.println(num.mult3num(1, 20, 30));
-		System.out.println(num.div2num(10, 10));
-		System.out.println(num.div3num(1, 20, 30));
+		System.out.println(num.div2num(20, 0));
+		System.out.println(num.div3num(2, 2, 100));
 	}
 
 }
